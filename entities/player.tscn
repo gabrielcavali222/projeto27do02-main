@@ -120,10 +120,13 @@ shape = SubResource("CapsuleShape2D_rfe5m")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -3)
 sprite_frames = SubResource("SpriteFrames_th03a")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_bottom = 208
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_top_margin = 0.3

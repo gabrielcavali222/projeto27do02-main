@@ -1,0 +1,177 @@
+[gd_scene load_steps=17 format=4 uid="uid://coc5nxxbse1qc"]
+
+[ext_resource type="PackedScene" uid="uid://cqx8jumml8a7o" path="res://entities/player.tscn" id="1_wvnuc"]
+[ext_resource type="TileSet" uid="uid://28374yoaqn08" path="res://tiles/terrain.tres" id="2_vbx48"]
+[ext_resource type="Texture2D" uid="uid://dhk77oceq1xrs" path="res://sprites/Seasonal Tilesets/3 - Tropics/Background parts/5 - Sky_color.png" id="3_vbx48"]
+[ext_resource type="Texture2D" uid="uid://cflkl1v373dde" path="res://sprites/Seasonal Tilesets/3 - Tropics/Background parts/4 - Background_clouds.png" id="4_kqnwl"]
+[ext_resource type="Texture2D" uid="uid://dtcu603nqhiop" path="res://sprites/Seasonal Tilesets/3 - Tropics/Background parts/3 - Floating_clouds.png" id="5_yk7xu"]
+[ext_resource type="Texture2D" uid="uid://chpjlv7fp6tvr" path="res://sprites/Seasonal Tilesets/3 - Tropics/Background parts/1 - Waters_version_1.png" id="6_ukyf8"]
+[ext_resource type="Texture2D" uid="uid://bns0lgtsjmylf" path="res://sprites/Seasonal Tilesets/3 - Tropics/Background parts/2 - Waters_version_2.png" id="7_2htkr"]
+[ext_resource type="Texture2D" uid="uid://c4erea3auitpm" path="res://sprites/Seasonal Tilesets/3 - Tropics/Tropics_entities (16 x 16).png" id="8_2htkr"]
+[ext_resource type="Script" uid="uid://bu8ek1krasiov" path="res://scripts/water.gd" id="9_aitm3"]
+[ext_resource type="TileSet" uid="uid://kqaeu2djsaw5" path="res://tiles/props.tres" id="10_cosdo"]
+[ext_resource type="Texture2D" uid="uid://basu8kp1w7n1n" path="res://sprites/Seasonal Tilesets/5 - Misc. universal tiles/House (112 x 96).png" id="11_dfsuq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aitm3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ukyf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2htkr")
+}],
+"loop": true,
+"name": &"water",
+"speed": 5.0
+}]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aitm3"]
+texture = ExtResource("8_2htkr")
+12:5/animation_separation = Vector2i(1, 0)
+12:5/animation_speed = 4.0
+12:5/animation_frame_0/duration = 1.0
+12:5/animation_frame_1/duration = 1.0
+12:5/0 = 0
+12:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_c7cbo"]
+sources/0 = SubResource("TileSetAtlasSource_aitm3")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wpfc8"]
+texture = ExtResource("11_dfsuq")
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_aog8n"]
+sources/1 = SubResource("TileSetAtlasSource_wpfc8")
+
+[node name="Tropical" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_wvnuc")]
+position = Vector2(89, 111)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAACAAsAAwAEAAEAAAADAAsAAwAEAAEAAAAEAAsAAwAEAAEAAAAFAAsAAwAEAAEAAAAGAAsAAwAEAAEAAAAHAAsAAwAEAAEAAAAIAAsAAwAEAAEAAAAJAAsAAwAEAAEAAAAKAAsAAwAEAAEAAAALAAsAAwAEAAEAAAAMAAsAAwAEAAEAAAANAAsAAwAFAAEAAAAQAAsAAwADAAEAAAARAAsAAwAEAAEAAAASAAsAAwAEAAEAAAATAAsAAwAEAAEAAAAUAAsAAwAEAAEAAAAVAAsAAwAEAAEAAAAWAAsAAwAEAAEAAAAXAAsAAwAEAAEAAAAYAAsAAwAEAAEAAAAZAAsAAwAEAAEAAAAaAAsAAwAEAAEAAAAbAAsAAwAEAAEAAAAcAAsAAwAEAAEAAAAdAAsAAwAEAAEAAAAeAAsAAwAEAAEAAAAfAAsAAwAEAAEAAAAgAAsAAwAEAAEAAAAhAAsAAwAEAAEAAAAiAAsAAwAEAAEAAAABAAsAAwAEAAEAAAAAAAsAAwADAAEAAAAjAAsAAwAFAAEAAAAAAAwAAwADAAIAAAABAAwAAwAEAAIAAAACAAwAAwAEAAIAAAADAAwAAwAEAAIAAAAEAAwAAwAEAAIAAAAFAAwAAwAEAAIAAAAGAAwAAwAEAAIAAAAHAAwAAwAEAAIAAAAIAAwAAwAEAAIAAAAJAAwAAwAEAAIAAAAKAAwAAwAEAAIAAAALAAwAAwAEAAIAAAAMAAwAAwAEAAIAAAANAAwAAwAFAAIAAAAQAAwAAwADAAIAAAARAAwAAwAEAAIAAAASAAwAAwAEAAIAAAATAAwAAwAEAAIAAAAUAAwAAwAEAAIAAAAVAAwAAwAEAAIAAAAWAAwAAwAEAAIAAAAXAAwAAwAEAAIAAAAYAAwAAwAEAAIAAAAZAAwAAwAEAAIAAAAaAAwAAwAEAAIAAAAbAAwAAwAEAAIAAAAcAAwAAwAEAAIAAAAdAAwAAwAEAAIAAAAeAAwAAwAEAAIAAAAfAAwAAwAEAAIAAAAgAAwAAwAEAAIAAAAhAAwAAwAEAAIAAAAiAAwAAwAEAAIAAAAjAAwAAwAFAAIAAAA=")
+tile_set = ExtResource("2_vbx48")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
+texture = ExtResource("3_vbx48")
+centered = false
+
+[node name="Clouds" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Clouds"]
+texture = ExtResource("4_kqnwl")
+centered = false
+
+[node name="FloatingClouds" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/FloatingClouds"]
+texture = ExtResource("5_yk7xu")
+centered = false
+
+[node name="Water" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, -11)
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(288, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/Water"]
+sprite_frames = SubResource("SpriteFrames_aitm3")
+animation = &"water"
+autoplay = "water"
+centered = false
+
+[node name="Water" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAsAAAAMAAUAAAAAAAwAAAAMAAYAAAABAAsAAAAMAAUAAAABAAwAAAAMAAYAAAACAAsAAAAMAAUAAAACAAwAAAAMAAYAAAADAAsAAAAMAAUAAAADAAwAAAAMAAYAAAAEAAsAAAAMAAUAAAAEAAwAAAAMAAYAAAAFAAsAAAAMAAUAAAAFAAwAAAAMAAYAAAAGAAsAAAAMAAUAAAAGAAwAAAAMAAYAAAAHAAsAAAAMAAUAAAAHAAwAAAAMAAYAAAAIAAsAAAAMAAUAAAAIAAwAAAAMAAYAAAAJAAsAAAAMAAUAAAAJAAwAAAAMAAYAAAAKAAsAAAAMAAUAAAAKAAwAAAAMAAYAAAALAAsAAAAMAAUAAAALAAwAAAAMAAYAAAAMAAsAAAAMAAUAAAAMAAwAAAAMAAYAAAANAAsAAAAMAAUAAAANAAwAAAAMAAYAAAAOAAsAAAAMAAUAAAAOAAwAAAAMAAYAAAAPAAsAAAAMAAUAAAAPAAwAAAAMAAYAAAAQAAsAAAAMAAUAAAAQAAwAAAAMAAYAAAARAAsAAAAMAAUAAAARAAwAAAAMAAYAAAASAAsAAAAMAAUAAAASAAwAAAAMAAYAAAATAAsAAAAMAAUAAAATAAwAAAAMAAYAAAAUAAsAAAAMAAUAAAAUAAwAAAAMAAYAAAAVAAsAAAAMAAUAAAAVAAwAAAAMAAYAAAAWAAsAAAAMAAUAAAAWAAwAAAAMAAYAAAAXAAsAAAAMAAUAAAAXAAwAAAAMAAYAAAAYAAsAAAAMAAUAAAAYAAwAAAAMAAYAAAAZAAsAAAAMAAUAAAAZAAwAAAAMAAYAAAAaAAsAAAAMAAUAAAAaAAwAAAAMAAYAAAAbAAsAAAAMAAUAAAAbAAwAAAAMAAYAAAAcAAsAAAAMAAUAAAAcAAwAAAAMAAYAAAAdAAsAAAAMAAUAAAAdAAwAAAAMAAYAAAAeAAsAAAAMAAUAAAAeAAwAAAAMAAYAAAAfAAsAAAAMAAUAAAAfAAwAAAAMAAYAAAAgAAsAAAAMAAUAAAAgAAwAAAAMAAYAAAAhAAsAAAAMAAUAAAAhAAwAAAAMAAYAAAAiAAsAAAAMAAUAAAAiAAwAAAAMAAYAAAAjAAsAAAAMAAUAAAAjAAwAAAAMAAYAAAD//wsAAAAMAAUAAAD//wwAAAAMAAYAAAD+/wsAAAAMAAUAAAD+/wwAAAAMAAYAAAD9/wsAAAAMAAUAAAD9/wwAAAAMAAYAAAD8/wsAAAAMAAUAAAD8/wwAAAAMAAYAAAD7/wsAAAAMAAUAAAD7/wwAAAAMAAYAAAD6/wsAAAAMAAUAAAD6/wwAAAAMAAYAAAD5/wsAAAAMAAUAAAD5/wwAAAAMAAYAAAAkAAsAAAAMAAUAAAAkAAwAAAAMAAYAAAAlAAsAAAAMAAUAAAAlAAwAAAAMAAYAAAAmAAsAAAAMAAUAAAAmAAwAAAAMAAYAAAAnAAsAAAAMAAUAAAAnAAwAAAAMAAYAAAAoAAsAAAAMAAUAAAAoAAwAAAAMAAYAAAApAAsAAAAMAAUAAAApAAwAAAAMAAYAAAAqAAsAAAAMAAUAAAAqAAwAAAAMAAYAAAArAAsAAAAMAAUAAAArAAwAAAAMAAYAAAAsAAsAAAAMAAUAAAAsAAwAAAAMAAYAAAAtAAsAAAAMAAUAAAAtAAwAAAAMAAYAAAAuAAsAAAAMAAUAAAAuAAwAAAAMAAYAAAAvAAsAAAAMAAUAAAAvAAwAAAAMAAYAAAAwAAsAAAAMAAUAAAAwAAwAAAAMAAYAAAAxAAsAAAAMAAUAAAAxAAwAAAAMAAYAAAAyAAsAAAAMAAUAAAAyAAwAAAAMAAYAAAAzAAsAAAAMAAUAAAAzAAwAAAAMAAYAAAA0AAsAAAAMAAUAAAA0AAwAAAAMAAYAAAA1AAsAAAAMAAUAAAA1AAwAAAAMAAYAAAA2AAsAAAAMAAUAAAA2AAwAAAAMAAYAAAA3AAsAAAAMAAUAAAA3AAwAAAAMAAYAAAA4AAsAAAAMAAUAAAA4AAwAAAAMAAYAAAA5AAsAAAAMAAUAAAA5AAwAAAAMAAYAAAA6AAsAAAAMAAUAAAA6AAwAAAAMAAYAAAA7AAsAAAAMAAUAAAA7AAwAAAAMAAYAAAA8AAsAAAAMAAUAAAA8AAwAAAAMAAYAAAD4/wsAAAAMAAUAAAD4/wwAAAAMAAYAAAD3/wsAAAAMAAUAAAD3/wwAAAAMAAYAAAD2/wsAAAAMAAUAAAD2/wwAAAAMAAYAAAD1/wsAAAAMAAUAAAD1/wwAAAAMAAYAAAD0/wsAAAAMAAUAAAD0/wwAAAAMAAYAAADz/wsAAAAMAAUAAADz/wwAAAAMAAYAAADy/wsAAAAMAAUAAADy/wwAAAAMAAYAAADx/wsAAAAMAAUAAADx/wwAAAAMAAYAAADw/wsAAAAMAAUAAADw/wwAAAAMAAYAAADv/wsAAAAMAAUAAADv/wwAAAAMAAYAAADu/wsAAAAMAAUAAADu/wwAAAAMAAYAAADt/wsAAAAMAAUAAADt/wwAAAAMAAYAAAA=")
+tile_set = SubResource("TileSet_c7cbo")
+script = ExtResource("9_aitm3")
+speed = 10.0
+
+[node name="Props" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAIAAkABgABAAEAAAAaAAoABgAFAAIAAAA=")
+tile_set = ExtResource("10_cosdo")
+
+[node name="Buildings" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAWAAcAAQAAAAIAAAAWAAgAAQAAAAMAAAAWAAkAAQAAAAQAAAAWAAoAAQAAAAUAAAAXAAYAAQABAAEAAAAXAAcAAQABAAIAAAAXAAgAAQABAAMAAAAXAAkAAQABAAQAAAAXAAoAAQABAAUAAAAYAAUAAQACAAAAAAAYAAYAAQACAAEAAAAYAAcAAQACAAIAAAAYAAgAAQACAAMAAAAYAAkAAQACAAQAAAAYAAoAAQACAAUAAAAZAAUAAQADAAAAAAAZAAYAAQADAAEAAAAZAAcAAQADAAIAAAAZAAgAAQADAAMAAAAZAAkAAQADAAQAAAAZAAoAAQADAAUAAAAaAAUAAQAEAAAAAAAaAAYAAQAEAAEAAAAaAAcAAQAEAAIAAAAaAAgAAQAEAAMAAAAaAAkAAQAEAAQAAAAaAAoAAQAEAAUAAAAbAAYAAQAFAAEAAAAbAAcAAQAFAAIAAAAbAAgAAQAFAAMAAAAbAAkAAQAFAAQAAAAbAAoAAQAFAAUAAAAcAAcAAQAGAAIAAAAcAAgAAQAGAAMAAAAcAAkAAQAGAAQAAAAcAAoAAQAGAAUAAAA=")
+tile_set = SubResource("TileSet_aog8n")
