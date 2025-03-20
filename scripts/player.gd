@@ -2,22 +2,29 @@ extends CharacterBody2D
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
-const SPEED = 55.0
+const SPEED = 75.0
 const JUMP_VELOCITY = -300.0
+
+@export var max_jump_count = 2
+
+var jump_count = 0
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	else:
+		jump_count = 0
+		
 		if velocity.x != 0:
 			anim.play("walk")
 		else:
 			anim.play("idle")
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and jump_count < max_jump_count:
 		velocity.y = JUMP_VELOCITY
+		jump_count += 1
 		anim.play("jump")
 
 	# Get the input direction and handle the movement/deceleration.
