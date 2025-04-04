@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
-const SPEED = 75.0
+const SPEED = 85.0
 const JUMP_VELOCITY = -300.0
 
 @export var max_jump_count = 2
@@ -43,3 +43,5 @@ func _physics_process(delta: float) -> void:
 
 		
 	move_and_slide()
+	
+	

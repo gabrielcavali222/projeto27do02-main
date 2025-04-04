@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cqx8jumml8a7o"]
+[gd_scene load_steps=20 format=3 uid="uid://cqx8jumml8a7o"]
 
 [ext_resource type="Script" uid="uid://b37k232huhfww" path="res://scripts/player.gd" id="1_ccomi"]
 [ext_resource type="Texture2D" uid="uid://oeafyeigvqre" path="res://sprites/Lil Wiz/Idle_(32 x 32).png" id="1_oeuh4"]
@@ -110,6 +110,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfe5m"]
+size = Vector2(20, 26)
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 1
 script = ExtResource("1_ccomi")
@@ -122,3 +125,9 @@ position = Vector2(0, -3)
 sprite_frames = SubResource("SpriteFrames_th03a")
 animation = &"walk"
 autoplay = "idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_rfe5m")
+debug_color = Color(0.39688, 0.00199762, 0.735343, 0.42)
