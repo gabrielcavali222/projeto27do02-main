@@ -226,5 +226,6 @@ position = Vector2(-12, 85)
 position = Vector2(-21, -2)
 shape = SubResource("RectangleShape2D_k4blr")
 
-[node name="Area2D" parent="." instance=ExtResource("12_mmgue")]
-position = Vector2(902, 94)
+[node name="LevelEnd" parent="." instance=ExtResource("12_mmgue")]
+position = Vector2(937, 95)
+next_level = "end"

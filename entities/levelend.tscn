@@ -5,8 +5,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61535"]
 size = Vector2(20, 153)
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" groups=["LevelEnd"]]
 script = ExtResource("1_4yein")
+next_level = "grassland"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 5.5)
