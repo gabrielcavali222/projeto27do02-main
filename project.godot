@@ -21,6 +21,7 @@ window/size/viewport_width=288
 window/size/viewport_height=208
 window/size/mode=2
 window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=0
 
 [global_group]
 
@@ -53,3 +54,4 @@ jump={
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+shading/vsync/vsync_mode=1
