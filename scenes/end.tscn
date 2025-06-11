@@ -12,10 +12,10 @@ offset_bottom = 210.0
 color = Color(2.83971e-06, 0.41049, 0.574055, 1)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 3.0
-offset_top = 182.0
-offset_right = 248.0
-offset_bottom = 205.0
+offset_left = 1.0
+offset_top = 186.0
+offset_right = 246.0
+offset_bottom = 209.0
 text = "Desenvolvido por Gabriel Cavali"
 
 [node name="TitleLable" type="Label" parent="."]

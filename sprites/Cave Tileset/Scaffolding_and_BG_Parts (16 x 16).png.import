@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjjaj7quax4ip"
-path="res://.godot/imported/Hurt_(32 x 32).png-403a0ddf4124164e9c627667f02edd7d.ctex"
+uid="uid://bbev2gqfyyt1s"
+path="res://.godot/imported/Scaffolding_and_BG_Parts (16 x 16).png-c651625529c428e725cca517a271805a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Lil Wiz/Hurt_(32 x 32).png"
-dest_files=["res://.godot/imported/Hurt_(32 x 32).png-403a0ddf4124164e9c627667f02edd7d.ctex"]
+source_file="res://sprites/Cave Tileset/Scaffolding_and_BG_Parts (16 x 16).png"
+dest_files=["res://.godot/imported/Scaffolding_and_BG_Parts (16 x 16).png-c651625529c428e725cca517a271805a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjjaj7quax4ip"
-path="res://.godot/imported/Hurt_(32 x 32).png-403a0ddf4124164e9c627667f02edd7d.ctex"
+uid="uid://ckje4omv3v2nh"
+path="res://.godot/imported/testelouco.jpg-0193088f72d5664e8a3259d70fcb3d01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Lil Wiz/Hurt_(32 x 32).png"
-dest_files=["res://.godot/imported/Hurt_(32 x 32).png-403a0ddf4124164e9c627667f02edd7d.ctex"]
+source_file="res://sprites/testelouco.jpg"
+dest_files=["res://.godot/imported/testelouco.jpg-0193088f72d5664e8a3259d70fcb3d01.ctex"]
 
 [params]
 

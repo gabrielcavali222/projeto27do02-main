@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjjaj7quax4ip"
-path="res://.godot/imported/Hurt_(32 x 32).png-403a0ddf4124164e9c627667f02edd7d.ctex"
+uid="uid://ddu6rqdr066d1"
+path="res://.godot/imported/Gray_Tile_Terrain (16 x 16).png-5edd6fcb0fb35082ce8a4ddc5d616606.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Lil Wiz/Hurt_(32 x 32).png"
-dest_files=["res://.godot/imported/Hurt_(32 x 32).png-403a0ddf4124164e9c627667f02edd7d.ctex"]
+source_file="res://sprites/Cave Tileset/Gray_Tile_Terrain (16 x 16).png"
+dest_files=["res://.godot/imported/Gray_Tile_Terrain (16 x 16).png-5edd6fcb0fb35082ce8a4ddc5d616606.ctex"]
 
 [params]
 
